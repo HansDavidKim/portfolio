@@ -18,7 +18,7 @@
           flex: Applies Flexbox layout to align items in a row
           lg:flex-1: On large screens, allows the flex item to grow and take full width
         -->
-        <a href="#" class="-m-1.5 p-1.5">
+        <a href="/" class="-m-1.5 p-1.5">
           <!-- 
             -m-1.5: Applies negative margin of -0.375rem (-6px)
             p-1.5: Adds padding of 0.375rem (6px)
@@ -73,7 +73,7 @@
           lg:flex: Shows the menu as a flex container on large screens
           lg:gap-x-12: Horizontal gap of 3rem (48px) between items
         -->
-        <a href="#" class="text-sm/6 font-semibold text-white">About Me</a>
+        <a href="/about" class="text-sm/6 font-semibold text-white">About Me</a>
         <!-- 
           text-sm/6: Sets font size to 0.875rem (14px) with line-height 1.5rem (24px)
           font-semibold: Applies medium font weight (600)
