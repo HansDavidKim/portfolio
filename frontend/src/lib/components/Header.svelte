@@ -1,189 +1,127 @@
 <header class="bg-white">
-    <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+    <!-- bg-white: Sets the background color of the header to white -->
+    <nav 
+      class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" 
+      aria-label="Global">
+      <!-- 
+        mx-auto: Centers the navigation container horizontally
+        flex: Enables Flexbox layout for child elements
+        max-w-7xl: Sets the maximum width of the navigation to 1280px (7xl)
+        items-center: Vertically aligns items to the center
+        justify-between: Distributes items with space between (left & right)
+        p-6: Applies padding of 1.5rem (24px) on all sides
+        lg:px-8: Increases horizontal padding to 2rem (32px) on large screens
+      -->
+  
       <div class="flex lg:flex-1">
+        <!-- 
+          flex: Applies Flexbox layout to align items in a row
+          lg:flex-1: On large screens, allows the flex item to grow and take full width
+        -->
         <a href="#" class="-m-1.5 p-1.5">
+          <!-- 
+            -m-1.5: Applies negative margin of -0.375rem (-6px)
+            p-1.5: Adds padding of 0.375rem (6px)
+          -->
           <span class="sr-only">Your Company</span>
-          <img class="h-8 w-auto" src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600" alt="">
+          <img 
+            class="h-8 w-auto" 
+            src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600" 
+            alt="Company Logo">
+          <!-- 
+            h-8: Sets height to 2rem (32px)
+            w-auto: Width is auto-scaled to maintain aspect ratio
+          -->
         </a>
       </div>
+  
+      <!-- Mobile Menu Button (Visible only on small screens) -->
       <div class="flex lg:hidden">
-        <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+        <!-- 
+          flex: Flexbox layout for the button
+          lg:hidden: Hides this element on large screens (≥1024px)
+        -->
+        <button 
+          type="button" 
+          class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+          <!-- 
+            -m-2.5: Negative margin of -0.625rem (-10px)
+            inline-flex: Makes the button an inline flex container
+            items-center: Vertically centers the icon in the button
+            justify-center: Horizontally centers the icon
+            rounded-md: Medium rounded corners (0.375rem)
+            p-2.5: Padding of 0.625rem (10px) on all sides
+            text-gray-700: Sets text color to medium gray
+          -->
           <span class="sr-only">Open main menu</span>
-          <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+          <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            <!-- 
+              size-6: Sets width and height of SVG to 1.5rem (24px)
+              fill="none": No background fill
+              stroke-width="1.5": Line thickness of 1.5px
+              stroke="currentColor": Follows the text color of the parent (text-gray-700)
+            -->
           </svg>
         </button>
       </div>
+  
+      <!-- Desktop Navigation Menu (Visible on large screens) -->
       <div class="hidden lg:flex lg:gap-x-12">
-        <div class="relative">
-          <button type="button" class="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900" aria-expanded="false">
-            Product
-            <svg class="size-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-              <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
-            </svg>
-          </button>
-  
-          <!--
-            'Product' flyout menu, show/hide based on flyout menu state.
-  
-            Entering: "transition ease-out duration-200"
-              From: "opacity-0 translate-y-1"
-              To: "opacity-100 translate-y-0"
-            Leaving: "transition ease-in duration-150"
-              From: "opacity-100 translate-y-0"
-              To: "opacity-0 translate-y-1"
-          -->
-          <div class="absolute top-full -left-8 z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
-            <div class="p-4">
-              <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50">
-                <div class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                  <svg class="size-6 text-gray-600 group-hover:text-indigo-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z" />
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z" />
-                  </svg>
-                </div>
-                <div class="flex-auto">
-                  <a href="#" class="block font-semibold text-gray-900">
-                    Analytics
-                    <span class="absolute inset-0"></span>
-                  </a>
-                  <p class="mt-1 text-gray-600">Get a better understanding of your traffic</p>
-                </div>
-              </div>
-              <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50">
-                <div class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                  <svg class="size-6 text-gray-600 group-hover:text-indigo-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.042 21.672 13.684 16.6m0 0-2.51 2.225.569-9.47 5.227 7.917-3.286-.672ZM12 2.25V4.5m5.834.166-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243-1.59-1.59" />
-                  </svg>
-                </div>
-                <div class="flex-auto">
-                  <a href="#" class="block font-semibold text-gray-900">
-                    Engagement
-                    <span class="absolute inset-0"></span>
-                  </a>
-                  <p class="mt-1 text-gray-600">Speak directly to your customers</p>
-                </div>
-              </div>
-              <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50">
-                <div class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                  <svg class="size-6 text-gray-600 group-hover:text-indigo-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M7.864 4.243A7.5 7.5 0 0 1 19.5 10.5c0 2.92-.556 5.709-1.568 8.268M5.742 6.364A7.465 7.465 0 0 0 4.5 10.5a7.464 7.464 0 0 1-1.15 3.993m1.989 3.559A11.209 11.209 0 0 0 8.25 10.5a3.75 3.75 0 1 1 7.5 0c0 .527-.021 1.049-.064 1.565M12 10.5a14.94 14.94 0 0 1-3.6 9.75m6.633-4.596a18.666 18.666 0 0 1-2.485 5.33" />
-                  </svg>
-                </div>
-                <div class="flex-auto">
-                  <a href="#" class="block font-semibold text-gray-900">
-                    Security
-                    <span class="absolute inset-0"></span>
-                  </a>
-                  <p class="mt-1 text-gray-600">Your customers’ data will be safe and secure</p>
-                </div>
-              </div>
-              <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50">
-                <div class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                  <svg class="size-6 text-gray-600 group-hover:text-indigo-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 16.875h3.375m0 0h3.375m-3.375 0V13.5m0 3.375v3.375M6 10.5h2.25a2.25 2.25 0 0 0 2.25-2.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v2.25A2.25 2.25 0 0 0 6 10.5Zm0 9.75h2.25A2.25 2.25 0 0 0 10.5 18v-2.25a2.25 2.25 0 0 0-2.25-2.25H6a2.25 2.25 0 0 0-2.25 2.25V18A2.25 2.25 0 0 0 6 20.25Zm9.75-9.75H18a2.25 2.25 0 0 0 2.25-2.25V6A2.25 2.25 0 0 0 18 3.75h-2.25A2.25 2.25 0 0 0 13.5 6v2.25a2.25 2.25 0 0 0 2.25 2.25Z" />
-                  </svg>
-                </div>
-                <div class="flex-auto">
-                  <a href="#" class="block font-semibold text-gray-900">
-                    Integrations
-                    <span class="absolute inset-0"></span>
-                  </a>
-                  <p class="mt-1 text-gray-600">Connect with third-party tools</p>
-                </div>
-              </div>
-              <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50">
-                <div class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                  <svg class="size-6 text-gray-600 group-hover:text-indigo-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
-                  </svg>
-                </div>
-                <div class="flex-auto">
-                  <a href="#" class="block font-semibold text-gray-900">
-                    Automations
-                    <span class="absolute inset-0"></span>
-                  </a>
-                  <p class="mt-1 text-gray-600">Build strategic funnels that will convert</p>
-                </div>
-              </div>
-            </div>
-            <div class="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
-              <a href="#" class="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 hover:bg-gray-100">
-                <svg class="size-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-                  <path fill-rule="evenodd" d="M2 10a8 8 0 1 1 16 0 8 8 0 0 1-16 0Zm6.39-2.908a.75.75 0 0 1 .766.027l3.5 2.25a.75.75 0 0 1 0 1.262l-3.5 2.25A.75.75 0 0 1 8 12.25v-4.5a.75.75 0 0 1 .39-.658Z" clip-rule="evenodd" />
-                </svg>
-                Watch demo
-              </a>
-              <a href="#" class="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 hover:bg-gray-100">
-                <svg class="size-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-                  <path fill-rule="evenodd" d="M2 3.5A1.5 1.5 0 0 1 3.5 2h1.148a1.5 1.5 0 0 1 1.465 1.175l.716 3.223a1.5 1.5 0 0 1-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 0 0 6.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 0 1 1.767-1.052l3.223.716A1.5 1.5 0 0 1 18 15.352V16.5a1.5 1.5 0 0 1-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 0 1 2.43 8.326 13.019 13.019 0 0 1 2 5V3.5Z" clip-rule="evenodd" />
-                </svg>
-                Contact sales
-              </a>
-            </div>
-          </div>
-        </div>
-  
+        <!-- 
+          hidden: Hides the menu on small screens
+          lg:flex: Shows the menu as a flex container on large screens
+          lg:gap-x-12: Horizontal gap of 3rem (48px) between items
+        -->
         <a href="#" class="text-sm/6 font-semibold text-gray-900">Features</a>
+        <!-- 
+          text-sm/6: Sets font size to 0.875rem (14px) with line-height 1.5rem (24px)
+          font-semibold: Applies medium font weight (600)
+          text-gray-900: Text color is dark gray
+        -->
         <a href="#" class="text-sm/6 font-semibold text-gray-900">Marketplace</a>
         <a href="#" class="text-sm/6 font-semibold text-gray-900">Company</a>
       </div>
+  
+      <!-- Right Section: Log in Button -->
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <a href="#" class="text-sm/6 font-semibold text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a>
+        <!-- 
+          hidden: Hides this section on small screens
+          lg:flex: Shows this section on large screens as a flex container
+          lg:flex-1: Takes the remaining available space
+          lg:justify-end: Aligns the content to the right
+        -->
+        <a href="#" class="text-sm/6 font-semibold text-gray-900">
+          Log in <span aria-hidden="true">&rarr;</span>
+        </a>
       </div>
     </nav>
-    <!-- Mobile menu, show/hide based on menu open state. -->
-    <div class="lg:hidden" role="dialog" aria-modal="true">
-      <!-- Background backdrop, show/hide based on slide-over state. -->
-      <div class="fixed inset-0 z-10"></div>
-      <div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-        <div class="flex items-center justify-between">
-          <a href="#" class="-m-1.5 p-1.5">
-            <span class="sr-only">Your Company</span>
-            <img class="h-8 w-auto" src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600" alt="">
-          </a>
-          <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
-            <span class="sr-only">Close menu</span>
-            <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-            </svg>
-          </button>
-        </div>
-        <div class="mt-6 flow-root">
-          <div class="-my-6 divide-y divide-gray-500/10">
-            <div class="space-y-2 py-6">
-              <div class="-mx-3">
-                <button type="button" class="flex w-full items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" aria-controls="disclosure-1" aria-expanded="false">
-                  Product
-                  <!--
-                    Expand/collapse icon, toggle classes based on menu open state.
   
-                    Open: "rotate-180", Closed: ""
-                  -->
-                  <svg class="size-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-                    <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
-                  </svg>
-                </button>
-                <!-- 'Product' sub-menu, show/hide based on menu state. -->
-                <div class="mt-2 space-y-2" id="disclosure-1">
-                  <a href="#" class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50">Analytics</a>
-                  <a href="#" class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50">Engagement</a>
-                  <a href="#" class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50">Security</a>
-                  <a href="#" class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50">Integrations</a>
-                  <a href="#" class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50">Automations</a>
-                  <a href="#" class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50">Watch demo</a>
-                  <a href="#" class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50">Contact sales</a>
-                </div>
-              </div>
-              <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Features</a>
-              <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Marketplace</a>
-              <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Company</a>
-            </div>
-            <div class="py-6">
-              <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Log in</a>
-            </div>
-          </div>
-        </div>
+    <!-- Mobile Menu Panel (Visible only on small screens) -->
+    <div class="lg:hidden" role="dialog" aria-modal="true">
+      <!-- 
+        lg:hidden: Hides the mobile menu on large screens
+      -->
+      <div class="fixed inset-0 z-10"></div>
+      <!-- 
+        fixed: Positions the backdrop at a fixed position (does not scroll with page)
+        inset-0: Positions it to cover the entire viewport
+        z-10: Sets a high stacking order to ensure it appears above other content
+      -->
+  
+      <div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <!-- 
+          fixed: Positions the menu panel at a fixed position
+          inset-y-0: Takes full vertical height
+          right-0: Aligns it to the right edge
+          w-full: Takes full width (on small screens)
+          overflow-y-auto: Allows vertical scrolling if content overflows
+          bg-white: Background color is white
+          px-6 py-6: Padding of 1.5rem (24px) on all sides
+          sm:max-w-sm: Maximum width of 24rem (384px) on small screens
+          sm:ring-1 sm:ring-gray-900/10: Applies a subtle shadow around the menu
+        -->
       </div>
     </div>
   </header>
+  
