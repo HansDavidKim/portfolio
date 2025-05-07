@@ -1,4 +1,4 @@
-<h1 class="text-3xl font-bold underline">
+<!--<h1 class="text-3xl font-bold underline">
     Hello world!
   </h1>
   <style lang="postcss">
@@ -6,4 +6,8 @@
     :global(html) {
       background-color: theme(--color-gray-100);
     }
-  </style>
+</style>-->
+
+<script></script>
+
+<h1>Daewon's Web</h1>
