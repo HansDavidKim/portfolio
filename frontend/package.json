@@ -43,5 +43,9 @@
 	},
 	"keywords": [
 		"svelte"
-	]
+	],
+	"dependencies": {
+		"@tailwindcss/vite": "^4.1.5",
+		"tailwindcss": "^4.1.5"
+	}
 }

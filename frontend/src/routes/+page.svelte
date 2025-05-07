@@ -1,4 +1,9 @@
-<script>
-    let name = 'Daewon';
-</script>
-<h1>Welcome to Svelte, {name}!</h1>
+<h1 class="text-3xl font-bold underline">
+    Hello world!
+  </h1>
+  <style lang="postcss">
+    @reference "tailwindcss";
+    :global(html) {
+      background-color: theme(--color-gray-100);
+    }
+  </style>
