@@ -1,5 +1,5 @@
-<header class="bg-white">
-    <!-- bg-white: Sets the background color of the header to white -->
+<header class="bg-black">
+    <!-- bg-black: Sets the background color of the header to black -->
     <nav 
       class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" 
       aria-label="Global">
@@ -43,7 +43,7 @@
         -->
         <button 
           type="button" 
-          class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+          class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white">
           <!-- 
             -m-2.5: Negative margin of -0.625rem (-10px)
             inline-flex: Makes the button an inline flex container
@@ -73,14 +73,14 @@
           lg:flex: Shows the menu as a flex container on large screens
           lg:gap-x-12: Horizontal gap of 3rem (48px) between items
         -->
-        <a href="#" class="text-sm/6 font-semibold text-gray-900">Features</a>
+        <a href="#" class="text-sm/6 font-semibold text-white">About Me</a>
         <!-- 
           text-sm/6: Sets font size to 0.875rem (14px) with line-height 1.5rem (24px)
           font-semibold: Applies medium font weight (600)
           text-gray-900: Text color is dark gray
         -->
-        <a href="#" class="text-sm/6 font-semibold text-gray-900">Marketplace</a>
-        <a href="#" class="text-sm/6 font-semibold text-gray-900">Company</a>
+        <a href="#" class="text-sm/6 font-semibold text-white">Posts</a>
+        <a href="#" class="text-sm/6 font-semibold text-white">Career</a>
       </div>
   
       <!-- Right Section: Log in Button -->
@@ -91,8 +91,8 @@
           lg:flex-1: Takes the remaining available space
           lg:justify-end: Aligns the content to the right
         -->
-        <a href="#" class="text-sm/6 font-semibold text-gray-900">
-          Log in <span aria-hidden="true">&rarr;</span>
+        <a href="#" class="text-sm/6 font-semibold text-white">
+          GitHub<!--<span aria-hidden="true">&rarr;</span>-->
         </a>
       </div>
     </nav>
